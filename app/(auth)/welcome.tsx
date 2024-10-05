@@ -1,5 +1,5 @@
 import { router } from "expo-router";
-import { Button, Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import PagerView from "react-native-pager-view"
 import { Image } from 'expo-image';
@@ -19,10 +19,9 @@ export default function Page() {
         router.replace("/(auth)/get-started");
     }
 
-    const pageChanged = (e: PageSelectedEvent) => {
+    const pageChanged = (e: any) => {
         const currentPage = e.nativeEvent.position; // Get the current page position from nativeEvent
         setPagePosition(currentPage);
-        // console.log("Current Page:", currentPage);
 
         if (currentPage == 2) {
             setBtnText('Get Started');
@@ -127,9 +126,9 @@ export default function Page() {
             <View className="flex place-self-end">
 
                 <View className="flex flex-row justify-center">
-                    <Text className={`${pagePosition == 0 ? 'bg-blue-500': 'bg-black/20'} h-2 w-1/12 rounded-full mr-2 `}></Text>
-                    <Text className={`${pagePosition == 1 ? 'bg-blue-500': 'bg-black/20'} h-2 w-1/12 rounded-full mr-2 `}></Text>
-                    <Text className={`${pagePosition == 2 ? 'bg-blue-500': 'bg-black/20'} h-2 w-1/12 rounded-full `}></Text>
+                    <Text className={`${pagePosition == 0 ? 'bg-blue-500' : 'bg-black/20'} h-2 w-1/12 rounded-full mr-2 `}></Text>
+                    <Text className={`${pagePosition == 1 ? 'bg-blue-500' : 'bg-black/20'} h-2 w-1/12 rounded-full mr-2 `}></Text>
+                    <Text className={`${pagePosition == 2 ? 'bg-blue-500' : 'bg-black/20'} h-2 w-1/12 rounded-full `}></Text>
                 </View>
 
                 <TouchableOpacity className="mt-4" onPress={changeSlide}>

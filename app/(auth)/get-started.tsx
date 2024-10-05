@@ -1,5 +1,5 @@
-import { Link, router } from "expo-router";
-import { Button, Text, TouchableOpacity, View } from "react-native";
+import { Link } from "expo-router";
+import { Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Image } from 'expo-image';
 import getStarted from "@/assets/images/getStarted.svg"
